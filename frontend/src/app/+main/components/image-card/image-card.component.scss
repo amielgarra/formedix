@@ -1,0 +1,63 @@
+.image-card {
+  max-width: 300px;
+  background-color: #fff;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+  background-position: center;
+  overflow: hidden;
+  position: relative;
+  margin: 10px auto;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.image-card img {
+  transition: all linear 0.25s;
+}
+
+.image-card .profile-name {
+  position: absolute;
+  left: 30px;
+  bottom: 70px;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  transition: all linear 0.25s;
+}
+
+.image-card .profile-icons {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+  color: #fff;
+  transition: all linear 0.25s;
+}
+
+.image-card .image-card-title {
+  position: absolute;
+  bottom: 30px;
+  left: 30px;
+  color: #fff;
+  font-size: 13px;
+  transition: all linear 0.25s;
+}
+
+.image-card .profile-icons .fa {
+  margin: 5px;
+}
+
+.image-card:hover img {
+  filter: grayscale(100%);
+}
+
+.image-card:hover .profile-name {
+  bottom: 80px;
+}
+
+.image-card:hover .image-card-title {
+  bottom: 60px;
+}
+
+.image-card:hover .profile-icons {
+  right: 40px;
+}

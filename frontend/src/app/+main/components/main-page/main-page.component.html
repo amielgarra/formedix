@@ -1,0 +1,38 @@
+<nav class="navbar navbar-expand-lg bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Flickr Images</a>
+  </div>
+</nav>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 pt-4 mx-auto">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Search for awesome images..."
+        aria-label="Search"
+        [formControl]="searchFormControl"
+      />
+    </div>
+  </div>
+  <div
+    class="row pt-4"
+    infiniteScroll
+    [infiniteScrollDistance]="2"
+    (scrolled)="onScrollDown()"
+  >
+    <div class="col-md-2" *ngFor="let photo of photos$ | async">
+      <app-image-card
+        [photo]="photo"
+        (click)="showImage(photo)"
+      ></app-image-card>
+    </div>
+  </div>
+</div>
+<ng-image-fullscreen-view
+  [images]="selectedImages"
+  [imageIndex]="0"
+  [show]="showFlag"
+  (close)="closeImage()"
+>
+</ng-image-fullscreen-view>

@@ -1,0 +1,17 @@
+<div class="image-card">
+  <img
+    [src]="
+      'https://live.staticflickr.com/' +
+      photo.server +
+      '/' +
+      photo.id +
+      '_' +
+      photo.secret +
+      '.jpg'
+    "
+    class="img img-responsive"
+  />
+  <div class="image-card-title">
+    {{ photo.title }}
+  </div>
+</div>
